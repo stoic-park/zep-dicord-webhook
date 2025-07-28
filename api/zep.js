@@ -1,8 +1,14 @@
 export default async function handler(req, res) {
+  if (req.method === "OPTIONS") {
+    // CORS 사전 요청 대응
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).send("Method Not Allowed");
   }
 
+  
   const payload = req.body;
 
   // ZEP 이벤트에서 메시지 생성
