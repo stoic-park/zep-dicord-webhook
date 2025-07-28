@@ -1,12 +1,18 @@
 {
   "name": "zep-discord-webhook",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "ZEP → Discord Webhook 중계용 Vercel 함수",
+  "main": "api/zep.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vercel dev",
+    "start": "vercel dev",
+    "deploy": "vercel deploy"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "keywords": ["vercel", "webhook", "discord", "zep"],
+  "author": "Your Name",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
